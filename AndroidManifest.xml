@@ -19,7 +19,7 @@
 		    </intent-filter>
 		</activity>
         
-	    <receiver android:name="TorchWidgetProvider" android:label="Torch" >
+	    <receiver android:name="TorchWidgetProvider" android:label="@string/widget_name" >
 		    <intent-filter>
 		        <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
 		    </intent-filter>

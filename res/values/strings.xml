@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Torch</string>
+    <string name="widget_name">Torch</string>
     <string name="about">About: </string>
     <string name="dialog_about">About</string>
     <string name="about_torch">About Torch</string>
