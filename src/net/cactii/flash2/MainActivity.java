@@ -142,7 +142,7 @@ public class MainActivity extends Activity {
         slider.setHorizontalScrollBarEnabled(true);
         slider.setProgress(200 - this.mPrefs.getInt("strobeperiod", 100));
         strobeperiod = this.mPrefs.getInt("strobeperiod", 100);
-        strobeLabel.setText("Strobe frequency: " + 500 / strobeperiod + "Hz");
+        strobeLabel.setText(getString(R.string.label_strobefrequency) + 500 / strobeperiod + "Hz");
         slider.setOnSeekBarChangeListener(new OnSeekBarChangeListener() {
 
             @Override
@@ -150,7 +150,7 @@ public class MainActivity extends Activity {
                 strobeperiod = 201 - progress;
                 if (strobeperiod < 20)
                     strobeperiod = 20;
-                strobeLabel.setText("Strobe frequency: " + 500 / strobeperiod + "Hz");
+                strobeLabel.setText(getString(R.string.label_strobefrequency) + 500 / strobeperiod + "Hz");
 
                 Intent intent = new Intent("net.cactii.flash2.SET_STROBE");
                 intent.putExtra("period", strobeperiod);
@@ -220,7 +220,7 @@ public class MainActivity extends Activity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         boolean supRetVal = super.onCreateOptionsMenu(menu);
-        menu.addSubMenu(0, 0, 0, "About Torch");
+        menu.addSubMenu(0, 0, 0, getString(R.string.about_torch));
         return supRetVal;
     }
 
@@ -234,8 +234,8 @@ public class MainActivity extends Activity {
     private void openAboutDialog() {
         LayoutInflater li = LayoutInflater.from(this);
         View view = li.inflate(R.layout.aboutview, null);
-        new AlertDialog.Builder(MainActivity.this).setTitle("About").setView(view)
-                .setNegativeButton("Close", new DialogInterface.OnClickListener() {
+        new AlertDialog.Builder(MainActivity.this).setTitle(getString(R.string.dialog_about)).setView(view)
+                .setNegativeButton(getString(R.string.close), new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int whichButton) {
                         // Log.d(MSG_TAG, "Close pressed");
                     }
@@ -245,13 +245,13 @@ public class MainActivity extends Activity {
     private void openBrightDialog() {
         LayoutInflater li = LayoutInflater.from(this);
         View view = li.inflate(R.layout.brightwarn, null);
-        new AlertDialog.Builder(MainActivity.this).setTitle("Hi-brite 'On' button!!!")
+        new AlertDialog.Builder(MainActivity.this).setTitle(getString(R.string.hibright_button))
                 .setView(view)
-                .setNegativeButton("No thanks", new DialogInterface.OnClickListener() {
+                .setNegativeButton(getString(R.string.nothanks), new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int whichButton) {
                         MainActivity.this.buttonBright.setChecked(false);
                     }
-                }).setNeutralButton("Accept", new DialogInterface.OnClickListener() {
+                }).setNeutralButton(getString(R.string.accept), new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int whichButton) {
                         MainActivity.this.bright = true;
                         mPrefsEditor.putBoolean("bright", true);
