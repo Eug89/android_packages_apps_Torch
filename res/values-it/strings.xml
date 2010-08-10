@@ -2,7 +2,7 @@
 <resources>
     <string name="app_name">Torcia</string>
     <string name="about">Info: </string>
-    <string name="description">Questo programma utilizza il LED della fotocamera.\n\nRichiede root per pre-Froyo, altrimenti richiede root solo per la modalità \'Luminosità Max\'.\n</string>
+    <string name="description">Questo programma utilizza il LED della fotocamera.\n\</string>
     <string name="warning">Attenzione: Lasciare il LED attivo a lungo può surriscaldarlo.\n\nLa luminosità massima è stata testata per 1/2 ora, ma c\'è il rischio che possa danneggiare il LED.\n</string>
     <string name="license">Rilasciato sotto licenza GPL, v3.\nhttp://n1torch.googlecode.com/\n\nGrazie a David Prieto per la nuova UI.\n\nContact: bbuxton@gmail.com\n\n20/6/2010</string>
 
@@ -16,8 +16,7 @@
     <string name="label_frequency">Frequenza: (scorri per modificare)</string>
     <string name="label_info">\'Menu\' per info.</string>
 
-    <string name="label_no_root">No root</string>
-    <string name="no_root">Spiacente, ma il tuo telefono richiedi i permessi di root per questo. Sembra che tu non li abbia ancora ottenuti.\n\nPuoi continuare, ma il flash non funzionerà.\n\nPer assistenza  http://www.google.com/search?q=nexus+one+root</string>
+    
     <string name="setting_frequency_title">Frequenza Intermittenza</string>
     <string name="setting_frequency_summary">Frequenza della luce intermittente</string>
     <string name="setting_frequency_dialog">Frequenza</string>
